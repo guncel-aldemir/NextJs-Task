@@ -6,7 +6,7 @@ import { useTranslation } from 'next-i18next';
 const Main = () => {
   const { t,i18n } = useTranslation();
   return (
-    <div className="w-screen">
+    <div className="w-screen ">
           <div className="h-full md:flex md:flex-col mt-[214px] md:mx-[135px] md:gap-y-[11px]  ">
             <h1 className="font-['Open_Sans'] non-italic font-normal text-[60px] text-center leading-[60px] uppercase text-[#0D0D2D]">{t("main:list-one")}</h1>
             <h3 className=" font-['Open_Sans'] non-italic font-normal text-[25px] text-center leading-[110%] text-[#C38976]">{t("main:list-two")}</h3>
