@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import Photo from "../public/Assets/Images/Rectangle 190.png";
-import Photos2 from "../public/Assets/Images/Rectangle 192.png";
+import Kremlin from "../public/Assets/Images/Rectangle190.png";
+import Family from "../public/Assets/Images/Rectangle192.png";
 import { useTranslation } from 'next-i18next';
 const Header = () => {
     const { t,i18n } = useTranslation();
   return <div className="w-screen sm:w-screen ">
     <div className="">
-    <Image src={Photo} layout="responsive" alt=""/>
+    <Image src={Kremlin} layout="responsive" priority="false" alt=""/>
     </div>
     <div className="h-full md:flex md:flex-row md:mt-[173px] md:mx-[135px] md:gap-x-[20px]  sm:mx-0">
        <div className="w-full flex flex-col justify-start flex-1 sm:w-screen mb-[20px]">
@@ -21,7 +21,7 @@ const Header = () => {
         <p className="font-['Open_Sans'] non-italic font-light text-[17px] leading-[24.82px] text-[#0D0D2D] ">{t("header:subtitle-three")}</p>
        </div>
        <div className="flex flex-1 ">
-        <Image src={Photos2} alt=""/>
+        <Image src={Family} alt=""/>
        </div>
     </div>
   </div>;
