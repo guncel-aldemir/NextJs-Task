@@ -8,12 +8,13 @@ import Hotel from "./hotel";
 
 const Hotels = () => {
   return (
-    <div className="flex flex-row gap-[25px] justify-start ">
-        <Hotel image={Hotel1} title="ASTERIA BODRUM RESORT"/>
-        <Hotel image={Hotel2} title="ASTERIA KEMER RESORT" />
-        <Hotel image={Hotel3} title="ASTERIA KREMLIN PALACE" />
-        <Hotel image={Hotel4} title="ASTERIA ZEUS DİDİM" />
-        <Hotel image={Hotel5} title="ASTERIA VENUS DİDİM" />
+    <div className="flex flex-row flex-nowrap   gap-[6px] sm:gap-[20px] justify-start  ">
+        <Hotel image={Hotel1} title="ASTERIA" titleSec="BODRUM RESORT"/>
+        <Hotel image={Hotel2} title="ASTERIA" titleSec="KEMER RESORT" />
+        <Hotel image={Hotel3} title="ASTERIA" titleSec="KREMLIN PALACE"  />
+        <Hotel image={Hotel4} title="ASTERIA" titleSec="ZEUS DİDİM" />
+        <Hotel image={Hotel5} title="ASTERIA" titleSec="VENUS DİDİM" />
+       
     </div>
   )
 };

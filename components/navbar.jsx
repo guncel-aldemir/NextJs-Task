@@ -122,13 +122,13 @@ const Navbar = () => {
               <AiOutlineMenu size={20} />
             </div>
             <div className={ nav
-                  ? "lg:hidden fixed left-0 top-0 w-full h-screen bg-black/60"
+                  ? "lg:hidden fixed left-0 top-0 w-full h-screen bg-black/60 z-10"
                   : ""
               }
             >
               <div className={ nav
-                    ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#fff] p-10  ease-in duration-500"
-                    : "fixed left-[-100%] top-0 p-10  ease-in duration-500"
+                    ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#fff] p-10  ease-in duration-500 "
+                    : "fixed left-[-100%] top-0 p-10  ease-in duration-500 "
                 }
               >
                 <NavbarToggle handleNav={handleNav} handleLanguage={handleLanguage} language={language} setNav={setNav}/> 
