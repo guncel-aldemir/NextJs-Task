@@ -6,11 +6,8 @@ import Main from "../components/main";
 import Footer from "../components/footer";
 import { useRouter } from "next/router";
 const Accommodation = () => {
-  const router = useRouter();
-  const handleChange = (e) =>{
-    const locale = e.target.value
-    router.push("/",{locale},"accommodation")
-      }
+
+  
   return (
     <div>
         <Navbar/>

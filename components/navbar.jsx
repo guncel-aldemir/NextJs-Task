@@ -15,9 +15,7 @@ import Uk from "../public/Assets/Images/united-kingdom-flag-icon.png"
 const Navbar = () => {
   const router = useRouter();
   const {locale,locales,defaultLocale} = router;
-  console.log("locale",locale);
-  console.log("locales",locales);
-  console.log("default locale",defaultLocale);
+
   const [nav, setNav] = useState(false);
   const [language, setLanguage] = useState(false);
   const handleNav = () => {
@@ -26,8 +24,10 @@ const Navbar = () => {
   const handleLanguage = () => {
     setLanguage(!language);
   };
+  console.log("router",router);
   const handleChange = (e) =>{
   const locale = e.target.value
+  
   router.push("/","/",{locale})
   }
   const { t,i18n } = useTranslation();
