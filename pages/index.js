@@ -6,7 +6,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Header from '../components/header';
 import Main from '../components/main';
 import Footer from '../components/footer';
+import { useRouter } from 'next/router';
 export default function Home() {
+ 
   return (
     <div className="bg-[#F8F8F8]">
       <Head>
@@ -30,4 +32,5 @@ export const getStaticProps = async ({ locale }) => ({
      
     )),
   },
+  revalidate: 10,
 });

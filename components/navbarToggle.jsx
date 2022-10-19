@@ -6,8 +6,14 @@ import Vector2 from "../public/Assets/Icons/NavbarIcon/Vector.svg";
 import {  AiOutlineClose } from "react-icons/ai";
 import { useRouter } from "next/router";
 import { useTranslation } from 'next-i18next';
+import Turkey from "../public/Assets/Images/turkey-flag-icon.png"
+import Uk from "../public/Assets/Images/united-kingdom-flag-icon.png"
 const NavbarToggle = ({handleNav,handleLanguage,language}) => {
     const router = useRouter();
+    const handleChange = (e) =>{
+
+      router.push(`${e.target.value}`)
+        }
     const { t,i18n } = useTranslation();
   return (
     <div>
@@ -24,10 +30,12 @@ const NavbarToggle = ({handleNav,handleLanguage,language}) => {
                           <Image src={Vector} alt="" />
                           {language && ( 
                           <div className="flex flex-col items-center justify-center  absolute  top-[30px] left-[-10px] w-[60px] h-[100px] p-3 rounded-lg shadow-lg shadow-gray-400 hover:scale-105 ease-in duration-300 z-10 bg-[#f4f7f8]">
-                              <button className="uppercase font-['Rubik'] font-light text-[13px] text-[#0D0D2D] mb-[6px] hover:font-bold">
+                              <button className="uppercase font-['Rubik'] font-light text-[13px] text-[#0D0D2D] mb-[6px] hover:font-bold" value="en" onClick={handleChange}>
+                              <Image src={Uk} width="15px" height="15px" alt=""/>
                                 En
                               </button>
-                              <button className="uppercase font-['Rubik'] font-light text-[13px] mb-[6px] text-[#0D0D2D] hover:font-bold ">
+                              <button className="uppercase font-['Rubik'] font-light text-[13px] mb-[6px] text-[#0D0D2D] hover:font-bold " value="tr" onClick={handleChange}>
+                              <Image src={Turkey} width="15px" height="15px" alt=""/>
                                 Tr
                               </button>
                           </div>
